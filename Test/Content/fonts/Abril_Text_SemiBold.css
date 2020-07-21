@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Abril_Text_SemiBold';
+    src: url('fonts/Abril_Text_SemiBold.eot');
+    src: url('fonts/Abril_Text_SemiBold.eot') format('embedded-opentype'),
+         url('fonts/Abril_Text_SemiBold.woff2') format('woff2'),
+         url('fonts/Abril_Text_SemiBold.woff') format('woff'),
+         url('fonts/Abril_Text_SemiBold.ttf') format('truetype'),
+         url('fonts/Abril_Text_SemiBold.svg#Abril_Text_SemiBold') format('svg');
+}

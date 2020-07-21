@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model Test.Models.ContactModel
+
+<div class="login recovery">
+    <div class="heaading text-center">
+        <a href="#" class="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        <img src="~/Content/img/logo.png" width="94" height="79" alt="Expence Manager">
+        <h2>Accounts Manager</h2>
+    </div>
+    <svg width="100%" height="77">
+        <circle stroke="black" stroke-width="0" fill="#326ffb" cx="50%" r="454" cy="-403"></circle>
+    </svg>
+    <h3>Create your Account</h3>
+    <div class="colum">
+        @using (Html.BeginForm("Next", "Home", FormMethod.Post))
+        {
+        <div class="field-container">
+            <i><img src="~/Content/img/icon-mobile.png" width="16" height="31" alt="mobile"> </i>
+            @Html.TextBoxFor(model => model.Phonenumber, new { @class = "form-control", placeholder = "Mobile", type = "number" })
+            @*<input type="text" class="form-control" placeholder="Mobile">*@
+            @Html.ValidationMessageFor(model => model.Phonenumber, "", new { @class = "error-msg" })
+
+            @*<div class="error-msg" style="display: block">Please enter Phone number</div>*@
+        </div>
+        <div class="field-container mail">
+            <i><img src="~/Content/img/icon-mail.png" width="21" height="23" alt="mail"> </i>
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email ID", type = "email" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error-msg" })
+
+            @*<input type="password" class="form-control" placeholder="Email">*@
+        </div>
+            <div class="btn-box">
+                <input type="submit" class="btn" value="Next">
+            </div>
+        }
+
+        </div>
+</div>
